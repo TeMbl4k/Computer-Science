@@ -27,7 +27,7 @@
 //	
 //	uniform_int_distribution <> dis(min_value, max_value);
 //
-//	 for (int i = 0; i < 10; ++i)  // Заполняем матрицу
+//	 for (int i = 0; i < 10; ++i)  // Заполняем матрицу aboba
 //	 {
 //		 for (int j = 0; j < 10; ++j) 
 //		 {
