@@ -130,6 +130,7 @@
     <ClCompile Include="Computer science.cpp" />
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="Stock.cpp" />
+    <ClCompile Include="№2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

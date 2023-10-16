@@ -37,7 +37,7 @@ int main() {
 			cout << noshowpos << setw(2) << i << ") " << setw(6) << cur_stock_price << "$" << " : ";
 			cout << setw(6) << showpos << div_stock_price << "$ |";
 
-			for (int i = 1; i <= (cur_stock_price / 5000); ++i) // Цикл для вывода i количества звёздочек
+			for (int i = 1; i <= (cur_stock_price / 5000); ++i) // Цикл для вывода i количества звёзд
 			{
 				cout << "*";
 			}
@@ -48,6 +48,7 @@ int main() {
 		else
 		{
 			div_stock_price = dis(gen);
+			i--;
 		}
 	}
 }
