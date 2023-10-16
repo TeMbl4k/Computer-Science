@@ -1,9 +1,7 @@
 //#include <iostream>
-//
 //using namespace std;
 //
-//int main()
-//{
+//int main() {
 //	int start;
 //	int end;
 //	int div;
@@ -15,36 +13,33 @@
 //	cout << "Enter divider: ";
 //	cin >> div;
 //
-//	cout << "- Result -" << endl;
+//	bool flag = true;
 //
-//	if ((div != 0) && (start != end))
+//	cout << "-Result-" << endl;
+//
+//	if (div != 0)
 //	{
 //		if (start < end) {
-//			for (start; start <= end; ++start)
-//			{
-//				if (start % div == 0)
+//			for (start; start <= end; ++start) {
+//				if (start % div == 0) {
 //					cout << start << endl;
+//					flag = false;
+//				}
 //			}
 //		}
 //
 //		else {
 //			for (start; start >= end; --start)
 //			{
-//				if (start % div == 0)
+//				if (start % div == 0) {
 //					cout << start << endl;
+//					flag = false;
+//				}
 //			}
 //		}
 //	}
 //
-//	else if ((start == end) && (start < div)) {
-//		cout << "Empty";
-//	}
-//
-//	else if ((start == end) && (div == 1)) {
-//		cout << start;
-//	}
-//
-//	else {
+//	if (flag == true) {
 //		cout << "Empty";
 //	}
 //}
