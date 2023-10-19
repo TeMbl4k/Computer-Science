@@ -19,24 +19,19 @@ int main() {
 
 	for (int i = 1; i <= 36; ++i)
 	{
-		if ((10 < (cur_stock_price + div_stock_price)) && ((cur_stock_price + div_stock_price) < 300000))
-		{
-			cur_stock_price += div_stock_price;
-		}
-
-		else if (10 > (cur_stock_price + div_stock_price))
+		if (10 > (cur_stock_price + div_stock_price))
 		{
 			int dif = div_stock_price + 50000;
 			div_stock_price = dif;
-			cur_stock_price += div_stock_price;
 		}
 
-		else 
+		if (300000 <  (cur_stock_price + div_stock_price))
 		{
 			int dif = div_stock_price - 50000;
 			div_stock_price = dif;
-			cur_stock_price += div_stock_price;
 		}
+
+		cur_stock_price += div_stock_price;
 
 		cout << noshowpos << setw(2) << i << ") " << setw(6) << cur_stock_price << "$" << " : ";
 		cout << setw(6) << showpos << div_stock_price << "$ |";
