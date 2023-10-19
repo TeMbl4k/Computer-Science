@@ -25,7 +25,7 @@ int main() {
 			div_stock_price = dif;
 		}
 
-		if (300000 <  (cur_stock_price + div_stock_price))
+		if (300000 < (cur_stock_price + div_stock_price))
 		{
 			int dif = div_stock_price - 50000;
 			div_stock_price = dif;
