@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Computer science.cpp" />
     <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="square.cpp" />
     <ClCompile Include="Stock.cpp" />
     <ClCompile Include="№2.cpp" />
   </ItemGroup>

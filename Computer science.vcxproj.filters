@@ -13,18 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="closed">
+      <UniqueIdentifier>{943b45ed-3eb1-45a1-b8d6-a5f29a84ff8f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Computer science.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>closed</Filter>
     </ClCompile>
     <ClCompile Include="Matrix.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Stock.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>closed</Filter>
     </ClCompile>
     <ClCompile Include="№2.cpp">
+      <Filter>closed</Filter>
+    </ClCompile>
+    <ClCompile Include="Stock.cpp">
+      <Filter>closed</Filter>
+    </ClCompile>
+    <ClCompile Include="square.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
