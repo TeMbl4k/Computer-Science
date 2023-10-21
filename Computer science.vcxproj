@@ -127,12 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Computer science.cpp" />
-    <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="square.cpp" />
-    <ClCompile Include="Stock.cpp" />
     <ClCompile Include="wavg.cpp" />
-    <ClCompile Include="№2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
