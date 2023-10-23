@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="sample.cpp" />
+    <ClCompile Include="template.cpp" />
     <ClCompile Include="square.cpp" />
     <ClCompile Include="wavg.cpp" />
   </ItemGroup>

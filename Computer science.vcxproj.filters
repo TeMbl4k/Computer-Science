@@ -18,22 +18,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Computer science.cpp">
-      <Filter>closed</Filter>
-    </ClCompile>
-    <ClCompile Include="Matrix.cpp">
-      <Filter>closed</Filter>
-    </ClCompile>
-    <ClCompile Include="№2.cpp">
-      <Filter>closed</Filter>
-    </ClCompile>
-    <ClCompile Include="Stock.cpp">
-      <Filter>closed</Filter>
-    </ClCompile>
     <ClCompile Include="square.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="wavg.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="template.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
