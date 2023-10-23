@@ -34,7 +34,6 @@ int main() {
     }
 
     else {
-
         cout << numbers[0];
     }
 
