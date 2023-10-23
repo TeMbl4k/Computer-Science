@@ -1,52 +1,46 @@
 #include <iostream>
-#include <vector>
+
 using namespace std;
 
 int main() {
-    // Получаем входные данные от пользователя
+    // Ввод данных
     int L, Rn, Cn;
     cout << "Enter L: ";
     cin >> L;
 
-    vector<int> symbols(L);
+    int* numbers = new int[L];
+    cout << "Enter numbers:" << endl;
     for (int i = 0; i < L; ++i) {
         cout << "T" << i + 1 << ") ";
-        cin >> symbols[i];
+        cin >> numbers[i];
     }
-
     cout << "Enter Rn: ";
     cin >> Rn;
     cout << "Enter Cn: ";
     cin >> Cn;
 
-    // Создаем строку символов
-    string symbolString;
-    for (int symbol : symbols) {
-        if (symbol == 0) {
-            symbolString += " ";
-        }
-        else if (symbol == 1) {
-            symbolString += "*";
-        }
-        else if (symbol == 2) {
-            symbolString += "\\";
-        }
-        else if (symbol == 3) {
-            symbolString += "/";
-        }
-        else if (symbol == 4) {
-            symbolString += "+";
-        }
-        else if (symbol == 5) {
-            symbolString += "#";
-        }
-    }
-
-    // Печатаем рисунок
-    int symbolStringLength = symbolString.length();
-    for (int i = 0; i < Rn * L; ++i) {
-        for (int j = 0; j < Cn * symbolStringLength; ++j) {
-            cout << symbolString[(j / Cn + i) % symbolStringLength];
+    // Печать рисунка
+    int patternLength = L * Cn;
+    for (int r = 0; r < Rn; ++r) {
+        for (int i = 0; i < patternLength; ++i) {
+           if (numbers[i % L] == 0) {
+                 cout << " ";
+           }
+           else if (numbers[i % L] == 1) {
+                cout << "*";
+           }
+           else if (numbers[i] == 2) {
+                 cout << "\\";
+           }
+           else if (numbers[i] == 3) {
+                cout << "/";
+           }
+           else if (numbers[i] == 4) {
+                cout << "+";
+           }
+           else if (numbers[i] == 5) {
+               cout << "#";
+           }
         }
         cout << endl;
     }

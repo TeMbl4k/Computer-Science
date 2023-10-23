@@ -14,7 +14,6 @@
 //
 //	double* values = new double[amount];
 //	double* weights = new double[amount];
-//	double* values_weights = new double[amount];
 //	double sum_weights = 0;
 //	double sum_values_weights = 0;
 //
@@ -24,8 +23,7 @@
 //	}
 //
 //	for (int i = 0; i < amount; ++i) {
-//		values_weights[i] = values[i] * weights[i];
-//		sum_values_weights += values_weights[i];
+//		sum_values_weights += values[i] * weights[i];
 //		sum_weights += weights[i];
 //	}
 //
@@ -34,17 +32,20 @@
 //	cout << "-Result-" << endl;
 //	cout << "Val: ";
 //	for (int i = 0; i < amount; ++i) {
-//		cout << fixed << setprecision(3) << values[i] << " ";
-//		}
+//		cout << fixed << setprecision(3) << setw(8) << values[i] << " ";
+//	}
 //	cout << endl;
 //
 //
 //	cout << "Wts: ";
-//		for (int i = 0; i < amount; ++i)
-//		{
-//			cout << fixed << setprecision(3) << weights[i] << " ";
-//		}
+//	for (int i = 0; i < amount; ++i)
+//	{
+//		cout << fixed << setprecision(3) << setw(8) << weights[i] << " ";
+//	}
 //	cout << endl;
 //
-//	cout << "Wavg: " << fixed << setprecision(3) << wavg;
+//	cout << "Wavg: " << fixed << setprecision(3) << setw(4) << wavg;
+//
+//	delete[] values;
+//	delete[] weights;
 //}
