@@ -12,13 +12,12 @@ int main() {
         cout << i + 1 << ") ";
         cin >> numbers[i];
     }
-    
-    if (numCount != 1) {
-        for (int i = 0; i < numCount; ++i) {
-            cout << numbers[i] << " ";
-        }
-        cout << endl;
+     for (int i = 0; i < numCount; ++i) {
+         cout << numbers[i] << " ";
+     }
+     cout << endl;
 
+     if (numCount != 1) {
         for (int i = 1; i < numCount - 1; ++i) {
             cout << numbers[i] << " ";
             for (int j = 1; j < numCount - 1; ++j) {
@@ -31,10 +30,6 @@ int main() {
             cout << numbers[numCount - i - 1] << " ";
         }
         cout << endl;
-    }
-
-    else {
-        cout << numbers[0];
     }
 
     delete[] numbers;
