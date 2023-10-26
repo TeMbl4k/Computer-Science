@@ -19,31 +19,72 @@
 //    cout << "Enter Cn: ";
 //    cin >> Cn;
 //
+//    const char symbolChars[] = { ' ', '*', '\\', '/', '+', '#' };
+//
+//    int d = 0;
+//
 //    // Печать рисунка
-//    int patternLength = L * Cn;
-//    for (int r = 0; r < Rn; ++r) {
-//        for (int i = 0; i < patternLength; ++i) {
-//           if (numbers[i % L] == 0) {
-//                 cout << " ";
-//           }
-//           else if (numbers[i % L] == 1) {
-//                cout << "*";
-//           }
-//           else if (numbers[i] == 2) {
-//                 cout << "\\";
-//           }
-//           else if (numbers[i] == 3) {
-//                cout << "/";
-//           }
-//           else if (numbers[i] == 4) {
-//                cout << "+";
-//           }
-//           else if (numbers[i] == 5) {
-//               cout << "#";
-//           }
+//    for (int j = 0; j < L; ++j) {
+//        for (int i = 0; i < L; ++i) {
+//            if ((i + j) < L)
+//                cout << symbolChars[numbers[i + j]];
+//
 //        }
 //        cout << endl;
 //    }
-//
-//    return 0;
 //}
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int L, Rn, Cn;
+    cout << "Enter L: ";
+    cin >> L;
+
+    cout << "Enter numbers:" << endl;
+    int ch;
+    string str = "";
+    for (int i = 0; i < L; i++) {
+        cout << "T" << i + 1 << ") ";
+        cin >> ch;
+         if (ch == 0) {
+                str += " ";
+            }
+            else if (ch == 1) {
+                str += "*";
+            }
+            else if (ch == 2) {
+                str+= "\\";
+            }
+            else if (ch == 3) {
+                str+="/";
+            }
+            else if (ch == 4) {
+                str+= "+";
+            }
+            else {
+                str+= "#";
+    }
+    }
+    cout << "Enter Rn: ";
+    cin >> Rn;
+    cout << "Enter Cn: ";
+    cin >> Cn;
+
+    int d = 0;
+ for (int k = 0; k <Rn;k++){
+     for (int j = 0; j <L; j++) {
+         for (int i = 0; i < L; i++) {
+             if (d>L)
+                 d = 0;
+    cout << str[d];
+          
+          d++;
+         }
+         cout << endl;
+     }
+    }
+
+
