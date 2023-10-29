@@ -127,10 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Index.cpp" />
+    <ClCompile Include="lenght.cpp" />
     <ClCompile Include="Partitioning.cpp" />
     <ClCompile Include="template.cpp" />
-    <ClCompile Include="square.cpp" />
-    <ClCompile Include="wavg.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
