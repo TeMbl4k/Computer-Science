@@ -130,6 +130,8 @@
     <ClCompile Include="Index.cpp" />
     <ClCompile Include="lenght.cpp" />
     <ClCompile Include="Partitioning.cpp" />
+    <ClCompile Include="randomString.cpp" />
+    <ClCompile Include="Table_fill.cpp" />
     <ClCompile Include="template.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
