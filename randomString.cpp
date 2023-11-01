@@ -1,59 +1,58 @@
-//#include <iostream>
-//#include <random>
-//
-//using namespace std;
-//
-//int main() {
-//    int N, L, lenght;
-//    cout << "Enter N: ";
-//    cin >> N;
-//
-//    random_device rd;
-//    mt19937 gen(rd());
-//    uniform_int_distribution<int> dis('A', 'Z');
-//
-//    char** array = new char* [N];
-//    for (int i = 0; i < N; ++i) {
-//        cout << "N" << i + 1 << "s) ";
-//        cin >> L;
-//        array[i] = new char[L];
-//
-//        for (int j = 0; j < L; ++j) {
-//            array[i][j] = static_cast<char>(dis(gen));
-//        }
-//    }
-//
-//    cout << "- Substrings -" << endl;
-//    for (int i = 0; i < N; ++i) {
-//        cout << "N[" << i << "] = ";
-//        for (int j = 0; j < array[i][j] != '\0'; ++j) {
-//            cout << array[i][j];
-//        }
-//        cout << endl;
-//    }
-//
-//    cout << "Enter L: ";
-//    cin >> lenght;
-//
-//    int num;
-//    int* nums = new int[lenght];
-//
-//    for (int i = 0; i < lenght; ++i) {
-//        cout << "L" << i + 1 << ") ";
-//        cin >> nums[i];
-//    }
-//
-//    cout << "- Result -" << endl;
-//    for (int i = 0; i < lenght; ++i) {
-//        for (int j = 0; j < array[nums[i]][j] != '\0'; ++j) {
-//            cout << array[nums[i]][j];
-//        }
-//    }
-//
-//
-//    for (int i = 0; i < N; ++i) {
-//        delete[] array[i];
-//    }
-//    delete[] array;
-//
-//}
+#include <iostream>
+
+using namespace std;
+
+bool finder(int value, int array_size, int* array, int& index) {
+    for (int i = 0; i < array_size; ++i) {
+        if (value == array[i]) {
+            index = i;
+            return true; // Число найдено
+        }
+    }
+    index = -1; // Число не найдено, возвращаем -1 в качестве индекса
+    return false; // Признак отсутствия числа
+}
+
+int main() {
+    int array_size, value1, value2;
+
+    cout << "Enter array size: ";
+    cin >> array_size;
+
+    int* nums = new int[array_size];
+
+    for (int i = 0; i < array_size; ++i) {
+        cout << "A" << i + 1 << ") ";
+        cin >> nums[i];
+    }
+
+    cout << "Enter first value: ";
+    cin >> value1;
+
+    int index1;
+    bool found1 = finder(value1, array_size, nums, index1);
+
+    cout << "Index of first value: ";
+    if (found1) {
+        cout << index1 << endl;
+    }
+    else {
+        cout << "null" << endl;
+    }
+
+    cout << "Enter second value: ";
+    cin >> value2;
+
+    int index2;
+    bool found2 = finder(value2, array_size, nums, index2);
+
+    cout << "Index of second value: ";
+    if (found2) {
+        cout << index2 << endl;
+    }
+    else {
+        cout << "null" << endl;
+    }
+
+    delete[] nums;
+}

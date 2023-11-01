@@ -2,17 +2,18 @@
 //
 //using namespace std;
 //
-//int finder(int value, int array_size, int* array) {
-//   for (int i = 0; i <= array_size; ++i) {
-//       if (value == array[i])
-//           return i;
+//bool finder(int value, int array_size, int* array, int& index) {
+//    for (int i = 0; i < array_size; ++i) {
+//        if (value == array[i]) {
+//            index = i;
+//            return true;
+//        }
 //    }
-//   return -1;
+//    return false;
 //}
 //
-//
 //int main() {
-//    int array, array_size, value1, value2;
+//    int array_size, value1, value2;
 //
 //    cout << "Enter array size: ";
 //    cin >> array_size;
@@ -27,22 +28,30 @@
 //    cout << "Enter first value: ";
 //    cin >> value1;
 //
-//    cout << "Index of first value: ";
+//    int index1;
+//    bool found1 = finder(value1, array_size, nums, index1);
 //
-//    if (finder(value1, array_size, nums) != -1)
-//        cout << finder(value1, array_size, nums) << endl;
-//    else
+//    cout << "Index of first value: ";
+//    if (found1) {
+//        cout << index1 << endl;
+//    }
+//    else {
 //        cout << "null" << endl;
+//    }
 //
 //    cout << "Enter second value: ";
 //    cin >> value2;
 //
+//    int index2;
+//    bool found2 = finder(value2, array_size, nums, index2);
+//
 //    cout << "Index of second value: ";
-//
-//    if (finder(value2, array_size, nums) != -1)
-//        cout << finder(value2, array_size, nums);
-//    else
-//        cout << "null";
-//
+//    if (found2) {
+//        cout << index2 << endl;
+//    }
+//    else {
+//        cout << "null" << endl;
+//    }
+//    
 //    delete[] nums;
 //}
