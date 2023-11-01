@@ -3,61 +3,67 @@
 //
 //using namespace std;
 //
-//int main() {
-//    random_device rd;
-//    mt19937 gen(rd());
-//    uniform_int_distribution<int> charDistribution('A', 'Z');
+//char getRandomChar() {
+//    int randomNum = rand() % 26;
+//    return static_cast<char>(randomNum + 65);
+//}
 //
+//void printSubstrings(int N, int* lengths) {
+//    cout << "- Substrings -" << endl;
+//
+//    for (int i = 0; i < N; i++) {
+//        cout << "N[" << i << "] = ";
+//
+//        for (int j = 0; j < lengths[i]; j++) {
+//            cout << getRandomChar();
+//
+//        }
+//
+//        cout << " ";
+//    }
+//
+//    cout << endl;
+//}
+//
+//void printResult(int L, int* indices, int N, int* lengths) {
+//    cout << "- Result - " << endl;
+//
+//    for (int i = 0; i < L; i++) {
+//        int index = indices[i];
+//
+//        if (index >= 0 && index < N) {
+//            for (int j = 0; j < lengths[index]; j++) {
+//                cout << getRandomChar();
+//            }
+//        }
+//    }
+//
+//    cout << endl;
+//}
+//
+//int main() {
 //    int N;
 //    cout << "Enter N: ";
 //    cin >> N;
 //
-//    int* substring_lengths = new int[N];
-//    string substrings[N];
-//
-//    for (int i = 0; i < N; ++i) {
-//        int length;
-//        cout << "N" << (i + 1) << "s) ";
-//        cin >> length;
-//
-//        string substring;
-//        for (int j = 0; j < length; ++j) {
-//            char random_char = charDistribution(gen);
-//            substring.push_back(random_char);
-//        }
-//
-//        substrings[i] = substring;
-//        substring_lengths[i] = length;
+//    int* lengths = new int[N];
+//    for (int i = 0; i < N; i++) {
+//        cout << "N" << i + 1 << "s) ";
+//        cin >> lengths[i];
 //    }
 //
-//    cout << "- Substrings -" << endl;
-//    for (int i = 0; i < N; ++i) {
-//        cout << "N[" << i << "] = " << substrings[i] << endl;
-//    }
+//    printSubstrings(N, lengths);
 //
 //    int L;
 //    cout << "Enter L: ";
 //    cin >> L;
 //
-//    int indices[L];
-//    for (int i = 0; i < L; ++i) {
-//        int index;
-//        cout << "L" << (i + 1) << ") ";
-//        cin >> index;
-//
-//        if (index >= 0 && index < N) {
-//            indices[i] = index;
-//        }
-//        else {
-//            cout << "Invalid index. Please enter a valid index." << endl;
-//            --i;
-//        }
+//    int* indices = new int[L];
+//    for (int i = 0; i < L; i++) {
+//        cout << "L" << i + 1 << ") ";
+//        cin >> indices[i];
 //    }
 //
-//    cout << "- Result -" << endl;
-//    for (int i = 0; i < L; ++i) {
-//        cout << substrings[indices[i]];
-//    }
+//    printResult(L, indices, N, lengths);
 //
-//    cout << endl;
 //}
