@@ -6,11 +6,11 @@ bool finder(int value, int array_size, int* array, int& index) {
     for (int i = 0; i < array_size; ++i) {
         if (value == array[i]) {
             index = i;
-            return true; // Число найдено
+            return true; 
         }
     }
-    index = -1; // Число не найдено, возвращаем -1 в качестве индекса
-    return false; // Признак отсутствия числа
+    index = -1; 
+    return false; 
 }
 
 int main() {
