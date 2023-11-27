@@ -2,7 +2,6 @@
 #include <fstream>
 
 using namespace std;
-
 void createBinaryFile(const string& inputFileName, const string& outputFileName) {
     ifstream inputFile(inputFileName);
     ofstream outputFile(outputFileName, ios::binary);
@@ -14,6 +13,7 @@ void createBinaryFile(const string& inputFileName, const string& outputFileName)
 
     if (!outputFile.is_open()) {
         cerr << "Error creating file " << outputFileName << endl;
+        inputFile.close();
         return;
     }
 
@@ -25,12 +25,16 @@ void createBinaryFile(const string& inputFileName, const string& outputFileName)
     outputFile.write(reinterpret_cast<char*>(&size), sizeof(int));
 
     int number;
-    while (inputFile >> number) {
+    for (int i = 0; i < size && inputFile >> number; ++i) {
         outputFile.write(reinterpret_cast<char*>(&number), sizeof(int));
     }
 
+    inputFile.close();
+    outputFile.close();
+
     cout << "File \"" << outputFileName << "\" created!" << endl;
 }
+
 
 void testBinaryFile(const string& fileName) {
     ifstream file(fileName, ios::binary);
@@ -52,6 +56,8 @@ void testBinaryFile(const string& fileName) {
         file.read(reinterpret_cast<char*>(&number), sizeof(int));
         cout << number << endl;
     }
+
+    file.close();
 
     cout << "End testing file \"" << fileName << "\"" << endl;
 }
